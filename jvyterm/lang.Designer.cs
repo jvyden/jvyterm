@@ -77,5 +77,14 @@ namespace jvyterm {
                 return ResourceManager.GetString("init", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logger successfully initialized..
+        /// </summary>
+        internal static string loggerinit {
+            get {
+                return ResourceManager.GetString("loggerinit", resourceCulture);
+            }
+        }
     }
 }

@@ -17,12 +17,13 @@ namespace jvyterm
             Console.WriteLine(lang.init);
             firstrun();
             logger.init(dataf);
+            logger.log(lang.loggerinit);
         }
         static void firstrun()
         {
             if (!Directory.Exists(dataf)) //Should we drop data folder?
             {
-                logger.log(lang.firstrun);
+                Console.WriteLine(lang.firstrun);
                 onFirstRun.prep(dataf);
             }
         }

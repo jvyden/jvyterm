@@ -123,4 +123,7 @@
   <data name="init" xml:space="preserve">
     <value>Initializing...</value>
   </data>
+  <data name="loggerinit" xml:space="preserve">
+    <value>Logger successfully initialized.</value>
+  </data>
 </root>
