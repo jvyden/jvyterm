@@ -5,6 +5,7 @@ namespace jvyterm
 {
     class Program
     {
+        static string dataf = Environment.CurrentDirectory + "\\data";
         static void Main()
         {
             init();
@@ -15,13 +16,14 @@ namespace jvyterm
         {
             Console.WriteLine(lang.init);
             firstrun();
+            logger.init(dataf);
         }
         static void firstrun()
         {
-            if (!Directory.Exists(Environment.CurrentDirectory + "\\data"))
+            if (!Directory.Exists(dataf)) //Should we drop data folder?
             {
-                Console.WriteLine(lang.firstrun);
-                onFirstRun.prep();
+                logger.log(lang.firstrun);
+                onFirstRun.prep(dataf);
             }
         }
     }
