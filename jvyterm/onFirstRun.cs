@@ -8,7 +8,7 @@ namespace jvyterm
 {
     class onFirstRun
     {
-        static void prep()
+        public static void prep()
         {
 
         }
