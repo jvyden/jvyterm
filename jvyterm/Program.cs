@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml;
 using System.IO;
 
 namespace jvyterm
@@ -10,17 +9,18 @@ namespace jvyterm
         {
             init();
         }
-        static string[] lang = {"Initializing...", "First run, prepping..."};
+        //static string[] lang = {"Initializing...", "First run, prepping..."};
+
         static void init()
         {
-            Console.WriteLine(lang[0]);
+            Console.WriteLine(lang.init);
             firstrun();
         }
         static void firstrun()
         {
             if (!Directory.Exists(Environment.CurrentDirectory + "\\data"))
             {
-                Console.WriteLine(lang[1]);
+                Console.WriteLine(lang.firstrun);
                 onFirstRun.prep();
             }
         }
