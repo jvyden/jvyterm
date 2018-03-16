@@ -86,5 +86,14 @@ namespace jvyterm {
                 return ResourceManager.GetString("loggerinit", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You&apos;re not supposed to be here. Make an issue..
+        /// </summary>
+        internal static string notsupposedtobehere {
+            get {
+                return ResourceManager.GetString("notsupposedtobehere", resourceCulture);
+            }
+        }
     }
 }

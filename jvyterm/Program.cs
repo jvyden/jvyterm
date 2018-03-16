@@ -21,7 +21,7 @@ namespace jvyterm
         }
         static void firstrun()
         {
-            if (!Directory.Exists(dataf)) //Should we drop data folder?
+            if (!Directory.Exists(dataf))
             {
                 Console.WriteLine(lang.firstrun);
                 onFirstRun.prep(dataf);

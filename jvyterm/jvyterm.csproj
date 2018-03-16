@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang.resx</DependentUpon>
     </Compile>
+    <Compile Include="shell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
