@@ -11,7 +11,7 @@ namespace jvyterm
         {
             using (var f = File.Open(logf, FileMode.Append))
             {
-                byte[] bytes = Encoding.ASCII.GetBytes(text);
+                byte[] bytes = Encoding.ASCII.GetBytes(text + '\n');
                 f.Write(bytes, 0, bytes.Length);
             }
             Console.WriteLine(text);
