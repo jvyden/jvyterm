@@ -1,8 +1,4 @@
 # jvyterm
-THIS PROJECT IS MEANT TO PRACTICE C# AND FOR FUN, PLEASE DO NOT TAKE IT SERIOUSLY. thanks.
-
-Would also like to mention that this is in early development.
-
 ## Planned Features
 * What you suggest in issues
 * Ability to run standard programs
