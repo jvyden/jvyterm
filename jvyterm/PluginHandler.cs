@@ -39,10 +39,9 @@ namespace jvyterm
             foreach (Type type in typelist)
             {
                 if (m == "init") { logger.log(lang.plugininit2 + init + lang.plugininit3); }
-                //MethodInfo method = type.GetMethod(m);
                 var c = Activator.CreateInstance(type);
                 type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
-                if (m == "init") { typelist.Remove(type); }
+                //if (m == "init") { typelist.Remove(type); } // PLEASE FIX THIS, SEE #2 IN ISSUES.
             }
         }
     }
