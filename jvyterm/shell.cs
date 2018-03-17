@@ -9,7 +9,8 @@ namespace jvyterm
             bool running = true;
             while (running)
             {
-                
+                Console.Write(">");
+                string input = Console.ReadLine();
             }
         }
     }

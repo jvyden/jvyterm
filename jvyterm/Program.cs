@@ -13,6 +13,7 @@ namespace jvyterm
 
         static void init()
         {
+            Console.Title = "jvyterm";
             Console.WriteLine(lang.init);
             firstrun();
             logger.init(dataf);
