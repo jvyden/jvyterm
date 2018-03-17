@@ -13,7 +13,7 @@ Would also like to mention that this is in early development.
 * Logger
 * Language system
 * Plugin/addon support to add your commands
+* Help Command
 
 ## Features currently being worked on
-* BasicCommands
-* Help Command
+* Basic Commands
