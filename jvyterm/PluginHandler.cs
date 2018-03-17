@@ -46,7 +46,6 @@ namespace jvyterm
                     return true;
                 }
                 catch { }
-                //if (m == "init") { typelist.Remove(type); } // PLEASE FIX THIS, SEE #2 IN ISSUES.
             }
             return true;
         }
