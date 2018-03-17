@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 
 namespace jvyterm
 {
@@ -7,9 +8,20 @@ namespace jvyterm
     {
         public static void init()
         {
-            logger.log("Initializing plugins...");
+            logger.log(lang.plugininit);
             string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\";
-            getAllDLLs(pluginf);
+            FileInfo[] dlls = getAllDLLs(pluginf);
+            foreach (FileInfo f in dlls)
+            {
+                logger.log("Loading " + f.Name + " ...");
+                Assembly a = Assembly.LoadFrom(f.FullName);
+                Type[] t = a.GetTypes();
+                foreach (Type type in t)
+                {
+                    logger.log(type.Name);
+                }
+            }
+            
         }
 
         static FileInfo[] getAllDLLs(string dir)

@@ -95,5 +95,14 @@ namespace jvyterm {
                 return ResourceManager.GetString("notsupposedtobehere", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initializing plugins....
+        /// </summary>
+        internal static string plugininit {
+            get {
+                return ResourceManager.GetString("plugininit", resourceCulture);
+            }
+        }
     }
 }

@@ -129,4 +129,7 @@
   <data name="notsupposedtobehere" xml:space="preserve">
     <value>You're not supposed to be here. Make an issue.</value>
   </data>
+  <data name="plugininit" xml:space="preserve">
+    <value>Initializing plugins...</value>
+  </data>
 </root>

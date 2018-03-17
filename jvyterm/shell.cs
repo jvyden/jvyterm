@@ -6,6 +6,7 @@ namespace jvyterm
     {
         public static void run()
         {
+            PluginHandler.init();
             bool running = true;
             while (running)
             {
