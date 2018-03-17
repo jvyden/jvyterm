@@ -22,7 +22,7 @@ namespace jvyterm
                 {
                     typelist.Add(type);
                 }
-                run("init", f.Name);
+                Run("init", f.Name);
             }
             
         }
@@ -34,15 +34,21 @@ namespace jvyterm
             return dlls;
         }
 
-        public static void run(string m, string init = null)
+        public static bool Run(string m, string init = null)
         {
             foreach (Type type in typelist)
             {
                 if (m == "init") { logger.log(lang.plugininit2 + init + lang.plugininit3); }
                 var c = Activator.CreateInstance(type);
-                type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
+                try
+                {
+                    type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
+                    return true;
+                }
+                catch { }
                 //if (m == "init") { typelist.Remove(type); } // PLEASE FIX THIS, SEE #2 IN ISSUES.
             }
+            return true;
         }
     }
 }

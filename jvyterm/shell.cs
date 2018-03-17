@@ -21,15 +21,14 @@ namespace jvyterm
             string[] commands = CommandHandler.getCmds();
             foreach (string c in commands)
             {
-                if (c == cmd)
-                {
-                    PluginHandler.run(cmd);
-                }
-                else
+                if (!PluginHandler.Run(cmd))
                 {
                     logger.log(lang.invalcmd);
                 }
+                break;
+             
             }
+            
         }
     }
 }
