@@ -16,12 +16,7 @@ namespace jvyterm
                 logger.log("Loading " + f.Name + " ...");
                 Assembly a = Assembly.LoadFrom(f.FullName);
                 Type[] t = a.GetTypes();
-                foreach (Type type in t)
-                {
-                    MethodInfo init = type.GetMethod("init");
-                    var c = Activator.CreateInstance(type);
-                    type.InvokeMember("init", BindingFlags.InvokeMethod, null,c, null);
-                }
+                run(t, "init");
             }
             
         }
@@ -31,6 +26,16 @@ namespace jvyterm
             DirectoryInfo d = new DirectoryInfo(dir);
             FileInfo[] dlls = d.GetFiles("*.dll");
             return dlls;
+        }
+
+        public static void run(Type[] t, string m)
+        {
+            foreach (Type type in t)
+            {
+                //MethodInfo method = type.GetMethod(m);
+                var c = Activator.CreateInstance(type);
+                type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
+            }
         }
     }
 }

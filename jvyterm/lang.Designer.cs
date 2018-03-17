@@ -79,6 +79,15 @@ namespace jvyterm {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Command..
+        /// </summary>
+        internal static string invalcmd {
+            get {
+                return ResourceManager.GetString("invalcmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logger successfully initialized..
         /// </summary>
         internal static string loggerinit {

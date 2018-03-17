@@ -6,7 +6,12 @@ namespace TestPlugin
     {
         public static void init()
         {
-            logger.log("test");
+            CommandHandler.addCommand("test");
+        }
+
+        public static void test()
+        {
+            logger.log("Test works");
         }
     }
 }
