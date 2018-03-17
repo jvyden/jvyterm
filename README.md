@@ -4,9 +4,9 @@ THIS PROJECT IS MEANT TO PRACTICE C# AND FOR FUN, PLEASE DO NOT TAKE IT SERIOUSL
 Would also like to mention that this is in early development.
 
 ## Planned Features
-* Ability to run standard programs
 * What you suggest in issues
-
+* Ability to run standard programs
+* Arguments
 
 ## Working Features
 * First run
