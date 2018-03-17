@@ -12,6 +12,7 @@ Would also like to mention that this is in early development.
 * First run
 * Logger
 * Language system
+* Plugin/addon support to add your commands
 
 ## Features currently being worked on
-* Plugin/addon support to add your commands
+BasicCommands
