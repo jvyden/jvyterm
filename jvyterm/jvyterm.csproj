@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="logger.cs" />
     <Compile Include="onFirstRun.cs" />
+    <Compile Include="PluginHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="lang.Designer.cs">
