@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace jvyterm
 {
-    class PluginHandler
+    public class PluginHandler
     {
         public static void init()
         {
