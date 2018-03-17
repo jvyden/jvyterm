@@ -10,7 +10,6 @@ namespace jvyterm
         {
             init();
         }
-        //static string[] lang = {"Initializing...", "First run, prepping..."};
 
         static void init()
         {
@@ -18,6 +17,7 @@ namespace jvyterm
             firstrun();
             logger.init(dataf);
             logger.log(lang.loggerinit);
+            shell.run();
         }
         static void firstrun()
         {

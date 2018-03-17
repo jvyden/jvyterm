@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Security.Permissions;
 using System.Text;
 
 namespace jvyterm
