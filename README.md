@@ -15,4 +15,5 @@ Would also like to mention that this is in early development.
 * Plugin/addon support to add your commands
 
 ## Features currently being worked on
-BasicCommands
+* BasicCommands
+* Help Command
