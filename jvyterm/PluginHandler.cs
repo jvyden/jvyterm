@@ -15,14 +15,14 @@ namespace jvyterm
             FileInfo[] dlls = getAllDLLs(pluginf);
             foreach (FileInfo f in dlls)
             {
-                logger.log("Loading " + f.Name + " ...");
+                logger.log(lang.pluginload + f.Name + lang.pluginload2);
                 Assembly a = Assembly.LoadFrom(f.FullName);
                 Type[] t = a.GetTypes();
                 foreach (Type type in t)
                 {
                     typelist.Add(type);
                 }
-                run("init");
+                run("init", f.Name);
             }
             
         }
@@ -34,10 +34,14 @@ namespace jvyterm
             return dlls;
         }
 
-        public static void run(string m)
+        public static void run(string m, string init = null)
         {
             foreach (Type type in typelist)
             {
+                if (m == "init")
+                {
+                    logger.log(lang.plugininit2 + init + lang.plugininit3);
+                }
                 //MethodInfo method = type.GetMethod(m);
                 var c = Activator.CreateInstance(type);
                 type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
