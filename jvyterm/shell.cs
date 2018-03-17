@@ -23,7 +23,7 @@ namespace jvyterm
             {
                 if (c == cmd)
                 {
-                    PluginHandler.run(null, cmd);
+                    PluginHandler.run(cmd);
                 }
                 else
                 {

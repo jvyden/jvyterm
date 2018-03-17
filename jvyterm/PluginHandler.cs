@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -6,6 +7,7 @@ namespace jvyterm
 {
     public class PluginHandler
     {
+        static List<Type> typelist = new List<Type>();
         public static void init()
         {
             logger.log(lang.plugininit);
@@ -16,7 +18,11 @@ namespace jvyterm
                 logger.log("Loading " + f.Name + " ...");
                 Assembly a = Assembly.LoadFrom(f.FullName);
                 Type[] t = a.GetTypes();
-                run(t, "init");
+                foreach (Type type in t)
+                {
+                    typelist.Add(type);
+                }
+                run("init");
             }
             
         }
@@ -28,9 +34,9 @@ namespace jvyterm
             return dlls;
         }
 
-        public static void run(Type[] t, string m)
+        public static void run(string m)
         {
-            foreach (Type type in t)
+            foreach (Type type in typelist)
             {
                 //MethodInfo method = type.GetMethod(m);
                 var c = Activator.CreateInstance(type);
