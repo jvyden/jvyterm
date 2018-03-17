@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandler.cs" />
     <Compile Include="logger.cs" />
     <Compile Include="onFirstRun.cs" />
     <Compile Include="PluginHandler.cs" />

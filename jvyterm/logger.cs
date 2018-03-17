@@ -4,7 +4,7 @@ using System.Text;
 
 namespace jvyterm
 {
-    class logger
+    public class logger
     {
         static string logf = Environment.CurrentDirectory + "\\data\\log.txt";
         public static void log(string text)

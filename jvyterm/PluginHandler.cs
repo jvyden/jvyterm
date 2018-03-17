@@ -19,6 +19,9 @@ namespace jvyterm
                 foreach (Type type in t)
                 {
                     logger.log(type.Name);
+                    MethodInfo init = type.GetMethod("init");
+                    var c = Activator.CreateInstance(type);
+                    type.InvokeMember("init", BindingFlags.InvokeMethod, null,c, null);
                 }
             }
             
