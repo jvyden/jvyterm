@@ -16,3 +16,4 @@ Would also like to mention that this is in early development.
 
 ## Features currently being worked on
 * BasicCommands
+* Help Command
