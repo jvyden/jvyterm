@@ -2,7 +2,7 @@
 
 namespace ArgTest
 {
-    public class Plugin //For testing arguments for those who want to implement
+    public class Plugin //For testing arguments for those who want try implementing the argument system.
     {
         public static void init(string[] args = null)
         {
