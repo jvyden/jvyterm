@@ -5,7 +5,7 @@ namespace jvyterm
 {
     class Program
     {
-        static string dataf = Environment.CurrentDirectory + "\\data";
+        static string dataf = Environment.CurrentDirectory + "\\data"; // Get the data directory.
         static void Main()
         {
             init();
@@ -14,18 +14,18 @@ namespace jvyterm
         static void init()
         {
             Console.Title = "jvyterm";
-            Console.WriteLine(lang.init);
-            firstrun();
-            logger.init(dataf);
-            logger.log(lang.loggerinit, logger.LogType.Regular);
-            shell.run();
+            Console.WriteLine(lang.init); // Tell the user that we're initializing the program.
+            firstrun(); // See if the program has been ran before.
+            logger.init(dataf); // Tells the logger to initialize with the data directory.
+            logger.log(lang.loggerinit, logger.LogType.Regular); // Tell the user the logger has been initialized.
+            shell.run(); // Begin running the shell.
         }
         static void firstrun()
         {
-            if (!Directory.Exists(dataf))
+            if (!Directory.Exists(dataf)) // Is the data directory there? If not, continue.
             {
-                Console.WriteLine(lang.firstrun);
-                onFirstRun.prep(dataf);
+                Console.WriteLine(lang.firstrun); // Tell the user we are preparing the data directory.
+                onFirstRun.prep(dataf); // Prepare with the data directory.
             }
         }
     }
