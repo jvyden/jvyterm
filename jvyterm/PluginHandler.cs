@@ -45,7 +45,7 @@ namespace jvyterm
                     type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
                     return true;
                 }
-                catch { }
+                catch { logger.log(lang.invalcmd); }
             }
             return true;
         }

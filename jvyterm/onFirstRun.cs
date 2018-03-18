@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 namespace jvyterm
 {
     class onFirstRun
@@ -8,7 +7,7 @@ namespace jvyterm
         {
             Directory.CreateDirectory(f);
             Directory.CreateDirectory(f + @"\plugins\");
-            /*System.Threading.Thread.Sleep(500);
+            /*System.Threading.Thread.Sleep(500);  // Broken, see issue #4. https://github.com/jvyden/jvyterm/issues/4
             DirectoryInfo d = new DirectoryInfo(Environment.CurrentDirectory);
             FileInfo[] i = d.GetFiles("*.dll");
             foreach(FileInfo fi in i)
