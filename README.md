@@ -1,8 +1,7 @@
 # jvyterm
 ## Planned Features
 * What you suggest in issues
-* Ability to run standard programs
-* Arguments
+* Ability to run standard programs (scrap?)
 
 ## Working Features
 * First run
@@ -13,3 +12,4 @@
 
 ## Features currently being worked on
 * Basic Commands
+* Arguments
