@@ -17,7 +17,7 @@ namespace jvyterm
             Console.WriteLine(lang.init);
             firstrun();
             logger.init(dataf);
-            logger.log(lang.loggerinit);
+            logger.log(lang.loggerinit, logger.LogType.Regular);
             shell.run();
         }
         static void firstrun()
