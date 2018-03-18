@@ -15,7 +15,7 @@ namespace jvyterm
             FileInfo[] dlls = getAllDLLs(pluginf);
             foreach (FileInfo f in dlls)
             {
-                logger.log(lang.pluginload + f.Name + lang.pluginload2, logger.LogType.Regular);
+                logger.log(lang.pluginload + f.Name + lang.dotdotdot, logger.LogType.Regular);
                 Assembly a = Assembly.LoadFrom(f.FullName);
                 Type[] t = a.GetTypes();
                 foreach (Type type in t)

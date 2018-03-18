@@ -61,6 +61,15 @@ namespace jvyterm {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ....
+        /// </summary>
+        internal static string dotdotdot {
+            get {
+                return ResourceManager.GetString("dotdotdot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First run, prepping....
         /// </summary>
         internal static string firstrun {
@@ -120,15 +129,6 @@ namespace jvyterm {
         internal static string pluginload {
             get {
                 return ResourceManager.GetString("pluginload", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ....
-        /// </summary>
-        internal static string pluginload2 {
-            get {
-                return ResourceManager.GetString("pluginload2", resourceCulture);
             }
         }
     }
