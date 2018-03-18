@@ -115,24 +115,6 @@ namespace jvyterm {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Initializing &quot;.
-        /// </summary>
-        internal static string plugininit2 {
-            get {
-                return ResourceManager.GetString("plugininit2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &quot;....
-        /// </summary>
-        internal static string plugininit3 {
-            get {
-                return ResourceManager.GetString("plugininit3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Loading .
         /// </summary>
         internal static string pluginload {

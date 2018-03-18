@@ -38,7 +38,6 @@ namespace jvyterm
         {
             foreach (Type type in typelist)
             {
-                if (m == "init") { logger.log(lang.plugininit2 + init + lang.plugininit3, logger.LogType.Regular); }
                 var c = Activator.CreateInstance(type);
                 try
                 {

@@ -135,12 +135,6 @@
   <data name="plugininit" xml:space="preserve">
     <value>Initializing plugins...</value>
   </data>
-  <data name="plugininit2" xml:space="preserve">
-    <value>Initializing "</value>
-  </data>
-  <data name="plugininit3" xml:space="preserve">
-    <value>"...</value>
-  </data>
   <data name="pluginload" xml:space="preserve">
     <value>Loading </value>
   </data>
