@@ -14,7 +14,7 @@ namespace BasicCommands
 
         public static void exit()
         {
-            logger.log("Goodbye!");
+            logger.log("Goodbye!", logger.LogType.Regular);
             Environment.Exit(0);
         }
 

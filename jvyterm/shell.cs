@@ -25,7 +25,7 @@ namespace jvyterm
                 {
                     if (!PluginHandler.Run(cmd))
                     {
-                        logger.log(lang.invalcmd);
+                        logger.log(lang.invalcmd, logger.LogType.Error);
                     }
                     break;
 
@@ -38,7 +38,7 @@ namespace jvyterm
             string[] commands = CommandHandler.getCmds();
             foreach (string c in commands)
             {
-                logger.log(c);
+                logger.log(c, logger.LogType.Regular);
             }
         }
     }

@@ -10,12 +10,12 @@ namespace jvyterm
         static List<Type> typelist = new List<Type>();
         public static void init()
         {
-            logger.log(lang.plugininit);
+            logger.log(lang.plugininit, logger.LogType.Regular);
             string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\";
             FileInfo[] dlls = getAllDLLs(pluginf);
             foreach (FileInfo f in dlls)
             {
-                logger.log(lang.pluginload + f.Name + lang.pluginload2);
+                logger.log(lang.pluginload + f.Name + lang.pluginload2, logger.LogType.Regular);
                 Assembly a = Assembly.LoadFrom(f.FullName);
                 Type[] t = a.GetTypes();
                 foreach (Type type in t)
@@ -38,14 +38,14 @@ namespace jvyterm
         {
             foreach (Type type in typelist)
             {
-                if (m == "init") { logger.log(lang.plugininit2 + init + lang.plugininit3); }
+                if (m == "init") { logger.log(lang.plugininit2 + init + lang.plugininit3, logger.LogType.Regular); }
                 var c = Activator.CreateInstance(type);
                 try
                 {
                     type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
                     return true;
                 }
-                catch { logger.log(lang.invalcmd); }
+                catch { logger.log(lang.invalcmd, logger.LogType.Error); }
             }
             return true;
         }
