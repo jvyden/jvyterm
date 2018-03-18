@@ -6,12 +6,18 @@ namespace ArgTest
     {
         public static void init(string[] args = null)
         {
-            CommandHandler.addCommand("echo");
+            CommandHandler.addCommand("argtest");
+            CommandHandler.addCommand("noargtest");
         }
 
-        public static void echo(string[] args = null)
+        public static void argtest(string[] args = null)
         {
             logger.log(args.ToString(), logger.LogType.Regular);
+        }
+
+        public static void noargtest(string[] args = null)
+        {
+            logger.log("working", logger.LogType.Regular);
         }
     }
 }
