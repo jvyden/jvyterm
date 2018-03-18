@@ -7,22 +7,22 @@ namespace jvyterm
 {
     public class PluginHandler
     {
-        static List<Type> typelist = new List<Type>();
+        static List<Type> typelist = new List<Type>(); // Prepare a new type for the command list.
         public static void init()
         {
-            logger.log(lang.plugininit, logger.LogType.Regular);
-            string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\";
-            FileInfo[] dlls = getAllDLLs(pluginf);
-            foreach (FileInfo f in dlls)
+            logger.log(lang.plugininit, logger.LogType.Regular); // Tell the user we are initializing the plugins.
+            string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\"; // Get the plugin directory.
+            FileInfo[] dlls = getAllDLLs(pluginf); // Define dlls as a list of all the dlls in the plugin directory.
+            foreach (FileInfo f in dlls) // For each file, do this.
             {
-                logger.log(lang.pluginload + f.Name + lang.dotdotdot, logger.LogType.Regular);
-                Assembly a = Assembly.LoadFrom(f.FullName);
-                Type[] t = a.GetTypes();
+                logger.log(lang.pluginload + f.Name + lang.dotdotdot, logger.LogType.Regular); // Tell the user we are loading a plugin.
+                Assembly a = Assembly.LoadFrom(f.FullName); // Load the plugin.
+                Type[] t = a.GetTypes(); // Prepares 
                 foreach (Type type in t)
                 {
                     typelist.Add(type);
                 }
-                Run("init", f.Name);
+                Run("init", f.Name); // Initialize the plugin
             }
             
         }
