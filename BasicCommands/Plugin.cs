@@ -3,18 +3,18 @@ using System;
 
 namespace BasicCommands
 {
-    public class Plugin
+    public class plugin
     {
         public static void init()
         {
-            CommandHandler.addCommand("exit");
-            CommandHandler.addCommand("clear");
-            CommandHandler.addCommand("cls");
+            commandHandler.addCommand("exit");
+            commandHandler.addCommand("clear");
+            commandHandler.addCommand("cls");
         }
 
         public static void exit()
         {
-            logger.log("Goodbye!", logger.LogType.Regular);
+            logger.log("Goodbye!", logger.logType.Regular);
             Environment.Exit(0);
         }
 

@@ -12,7 +12,7 @@ namespace jvyterm
         }
         public static void run()
         {
-            PluginHandler.init();
+            pluginHandler.init();
             bool running = true;
             while (running)
             {
@@ -23,14 +23,14 @@ namespace jvyterm
 
         static void runCmd(string cmd)
         {
-            string[] commands = CommandHandler.getCmds();
+            string[] commands = commandHandler.getCmds();
             if (cmd != "help")
             {
                 foreach (string c in commands)
                 {
-                    if (!PluginHandler.Run(cmd))
+                    if (!pluginHandler.Run(cmd))
                     {
-                        logger.log(lang.invalcmd, logger.LogType.Error);
+                        logger.log(lang.invalcmd, logger.logType.Error);
                     }
                     break;
 
@@ -40,10 +40,10 @@ namespace jvyterm
         }
         static void help()
         {
-            string[] commands = CommandHandler.getCmds();
+            string[] commands = commandHandler.getCmds();
             foreach (string c in commands)
             {
-                logger.log(c, logger.LogType.Regular);
+                logger.log(c, logger.logType.Regular);
             }
         }
     }

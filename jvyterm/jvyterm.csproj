@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandHandler.cs" />
+    <Compile Include="commandHandler.cs" />
     <Compile Include="logger.cs" />
     <Compile Include="onFirstRun.cs" />
-    <Compile Include="PluginHandler.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="pluginHandler.cs" />
+    <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="lang.Designer.cs">
       <AutoGen>True</AutoGen>

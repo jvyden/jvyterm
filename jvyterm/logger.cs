@@ -6,22 +6,22 @@ namespace jvyterm
 {
     public class logger
     {
-        static string logf = Environment.CurrentDirectory + "\\data\\log.txt";
-        public enum LogType {Error, Regular, Silent};
-        public static void log(string text, LogType l)
+        static string logF = Environment.CurrentDirectory + "\\data\\log.txt";
+        public enum logType {Error, Regular, Silent};
+        public static void log(string text, logType l)
         {
-            using (var f = File.Open(logf, FileMode.Append))
+            using (var f = File.Open(logF, FileMode.Append))
             {
                 byte[] bytes = Encoding.ASCII.GetBytes(text + '\n');
                 f.Write(bytes, 0, bytes.Length);
             }
-            if (l == LogType.Error)
+            if (l == logType.Error)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine(text);
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
-            else if (l == LogType.Regular)
+            else if (l == logType.Regular)
             {
                 Console.WriteLine(text);
             }
@@ -29,14 +29,14 @@ namespace jvyterm
 
         public static void init(string f)
         {
-            if (!File.Exists(logf))
+            if (!File.Exists(logF))
             {
-                File.Create(logf).Dispose();
+                File.Create(logF).Dispose();
             }
             else
             {
-                File.Delete(logf);
-                File.Create(logf).Dispose();
+                File.Delete(logF);
+                File.Create(logF).Dispose();
             }
         }
     }

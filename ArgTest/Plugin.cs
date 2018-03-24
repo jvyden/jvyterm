@@ -2,22 +2,22 @@
 
 namespace ArgTest
 {
-    public class Plugin //For testing arguments for those who want try implementing the argument system.
+    public class plugin //For testing arguments for those who want try implementing the argument system.
     {
         public static void init(string[] args = null)
         {
-            CommandHandler.addCommand("argtest");
-            CommandHandler.addCommand("noargtest");
+            commandHandler.addCommand("argtest");
+            commandHandler.addCommand("noargtest");
         }
 
         public static void argtest(string[] args = null)
         {
-            logger.log(args.ToString(), logger.LogType.Regular);
+            logger.log(args.ToString(), logger.logType.Regular);
         }
 
         public static void noargtest(string[] args = null)
         {
-            logger.log("working", logger.LogType.Regular);
+            logger.log("working", logger.logType.Regular);
         }
     }
 }
