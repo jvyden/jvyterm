@@ -1,6 +1,6 @@
 ﻿using jvyterm;
 
-namespace ArgTest
+namespace argTest
 {
     public class plugin //For testing arguments for those who want try implementing the argument system.
     {
@@ -12,12 +12,12 @@ namespace ArgTest
 
         public static void argtest(string[] args = null)
         {
-            logger.log(args.ToString(), logger.logType.Regular);
+            logger.log(args.ToString(), logger.logType.regular);
         }
 
         public static void noargtest(string[] args = null)
         {
-            logger.log("working", logger.logType.Regular);
+            logger.log("working", logger.logType.regular);
         }
     }
 }

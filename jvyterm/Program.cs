@@ -15,12 +15,12 @@ namespace jvyterm
         {
             Console.Title = "jvyterm";
             Console.WriteLine(lang.init); // Tell the user that we're initializing the program.
-            firstrun(); // See if the program has been ran before.
+            firstRun(); // See if the program has been ran before.
             logger.init(dataF); // Tells the logger to initialize with the data directory.
-            logger.log(lang.loggerInit, logger.logType.Regular); // Tell the user the logger has been initialized.
+            logger.log(lang.loggerInit, logger.logType.regular); // Tell the user the logger has been initialized.
             shell.run(); // Begin running the shell.
         }
-        static void firstrun()
+        static void firstRun()
         {
             if (!Directory.Exists(dataF)) // Is the data directory there? If not, continue.
             {

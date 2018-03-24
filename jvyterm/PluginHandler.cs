@@ -10,12 +10,12 @@ namespace jvyterm
         static List<Type> typeList = new List<Type>(); // Prepare a new type for the command list.
         public static void init()
         {
-            logger.log(lang.pluginInit, logger.logType.Regular); // Tell the user we are initializing the plugins.
+            logger.log(lang.pluginInit, logger.logType.regular); // Tell the user we are initializing the plugins.
             string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\"; // Get the plugin directory.
             FileInfo[] dlls = getAllDLLs(pluginf); // Define dlls as a list of all the dlls in the plugin directory.
             foreach (FileInfo f in dlls) // For each file, do this.
             {
-                logger.log(lang.pluginLoad + f.Name + lang.dotDotDot, logger.logType.Regular); // Tell the user we are loading a plugin.
+                logger.log(lang.pluginLoad + f.Name + lang.dotDotDot, logger.logType.regular); // Tell the user we are loading a plugin.
                 Assembly a = Assembly.LoadFrom(f.FullName); // Load the plugin.
                 Type[] t = a.GetTypes(); // Prepares 
                 foreach (Type type in t)
@@ -44,7 +44,7 @@ namespace jvyterm
                     type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
                     return true;
                 }
-                catch { logger.log(lang.invalCmd, logger.logType.Error); }
+                catch { logger.log(lang.invalCmd, logger.logType.error); }
             }
             return true;
         }

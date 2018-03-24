@@ -7,7 +7,7 @@ namespace jvyterm
     public class logger
     {
         static string logF = Environment.CurrentDirectory + "\\data\\log.txt";
-        public enum logType {Error, Regular, Silent};
+        public enum logType {error, regular, silent};
         public static void log(string text, logType l)
         {
             using (var f = File.Open(logF, FileMode.Append))
@@ -15,13 +15,13 @@ namespace jvyterm
                 byte[] bytes = Encoding.ASCII.GetBytes(text + '\n');
                 f.Write(bytes, 0, bytes.Length);
             }
-            if (l == logType.Error)
+            if (l == logType.error)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine(text);
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
-            else if (l == logType.Regular)
+            else if (l == logType.regular)
             {
                 Console.WriteLine(text);
             }

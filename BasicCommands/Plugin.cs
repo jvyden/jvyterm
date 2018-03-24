@@ -1,7 +1,7 @@
 ﻿using jvyterm;
 using System;
 
-namespace BasicCommands
+namespace basicCommands
 {
     public class plugin
     {
@@ -14,7 +14,7 @@ namespace BasicCommands
 
         public static void exit()
         {
-            logger.log("Goodbye!", logger.logType.Regular);
+            logger.log("Goodbye!", logger.logType.regular);
             Environment.Exit(0);
         }
 
