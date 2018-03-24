@@ -7,20 +7,20 @@ namespace jvyterm
 {
     public class pluginHandler
     {
-        static List<Type> typelist = new List<Type>(); // Prepare a new type for the command list.
+        static List<Type> typeList = new List<Type>(); // Prepare a new type for the command list.
         public static void init()
         {
-            logger.log(lang.plugininit, logger.logType.Regular); // Tell the user we are initializing the plugins.
+            logger.log(lang.pluginInit, logger.logType.Regular); // Tell the user we are initializing the plugins.
             string pluginf = Environment.CurrentDirectory + "\\data\\plugins\\"; // Get the plugin directory.
             FileInfo[] dlls = getAllDLLs(pluginf); // Define dlls as a list of all the dlls in the plugin directory.
             foreach (FileInfo f in dlls) // For each file, do this.
             {
-                logger.log(lang.pluginload + f.Name + lang.dotdotdot, logger.logType.Regular); // Tell the user we are loading a plugin.
+                logger.log(lang.pluginLoad + f.Name + lang.dotDotDot, logger.logType.Regular); // Tell the user we are loading a plugin.
                 Assembly a = Assembly.LoadFrom(f.FullName); // Load the plugin.
                 Type[] t = a.GetTypes(); // Prepares 
                 foreach (Type type in t)
                 {
-                    typelist.Add(type);
+                    typeList.Add(type);
                 }
                 Run("init", f.Name); // Initialize the plugin
             }
@@ -36,7 +36,7 @@ namespace jvyterm
 
         public static bool Run(string m, string init = null)
         {
-            foreach (Type type in typelist)
+            foreach (Type type in typeList)
             {
                 var c = Activator.CreateInstance(type);
                 try
@@ -44,7 +44,7 @@ namespace jvyterm
                     type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
                     return true;
                 }
-                catch { logger.log(lang.invalcmd, logger.logType.Error); }
+                catch { logger.log(lang.invalCmd, logger.logType.Error); }
             }
             return true;
         }

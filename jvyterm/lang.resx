@@ -117,28 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="dotdotdot" xml:space="preserve">
+  <data name="dotDotDot" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="firstrun" xml:space="preserve">
+  <data name="firstRun" xml:space="preserve">
     <value>First run, prepping...</value>
   </data>
   <data name="init" xml:space="preserve">
     <value>Initializing...</value>
   </data>
-  <data name="invalcmd" xml:space="preserve">
+  <data name="invalCmd" xml:space="preserve">
     <value>Invalid Command.</value>
   </data>
-  <data name="loggerinit" xml:space="preserve">
+  <data name="loggerInit" xml:space="preserve">
     <value>Logger successfully initialized.</value>
   </data>
-  <data name="notsupposedtobehere" xml:space="preserve">
+  <data name="notSupposedToBeHere" xml:space="preserve">
     <value>You're not supposed to be here. Make an issue.</value>
   </data>
-  <data name="plugininit" xml:space="preserve">
+  <data name="pluginInit" xml:space="preserve">
     <value>Initializing plugins...</value>
   </data>
-  <data name="pluginload" xml:space="preserve">
+  <data name="pluginLoad" xml:space="preserve">
     <value>Loading </value>
   </data>
 </root>

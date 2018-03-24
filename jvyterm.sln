@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jvyterm", "jvyterm\jvyterm.csproj", "{DA61EF31-919D-45C0-923B-D8047969D87F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCommands", "BasicCommands\BasicCommands.csproj", "{4F9696FF-6483-4C23-BE43-A9CB30D0142F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basicCommands", "BasicCommands\basicCommands.csproj", "{4F9696FF-6483-4C23-BE43-A9CB30D0142F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgTest", "ArgTest\ArgTest.csproj", "{78B7036D-8A46-4EF2-BECF-33E885A03D28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "argTest", "ArgTest\argTest.csproj", "{78B7036D-8A46-4EF2-BECF-33E885A03D28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

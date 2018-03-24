@@ -63,18 +63,18 @@ namespace jvyterm {
         /// <summary>
         ///   Looks up a localized string similar to ....
         /// </summary>
-        internal static string dotdotdot {
+        internal static string dotDotDot {
             get {
-                return ResourceManager.GetString("dotdotdot", resourceCulture);
+                return ResourceManager.GetString("dotDotDot", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to First run, prepping....
         /// </summary>
-        internal static string firstrun {
+        internal static string firstRun {
             get {
-                return ResourceManager.GetString("firstrun", resourceCulture);
+                return ResourceManager.GetString("firstRun", resourceCulture);
             }
         }
         
@@ -90,45 +90,45 @@ namespace jvyterm {
         /// <summary>
         ///   Looks up a localized string similar to Invalid Command..
         /// </summary>
-        internal static string invalcmd {
+        internal static string invalCmd {
             get {
-                return ResourceManager.GetString("invalcmd", resourceCulture);
+                return ResourceManager.GetString("invalCmd", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Logger successfully initialized..
         /// </summary>
-        internal static string loggerinit {
+        internal static string loggerInit {
             get {
-                return ResourceManager.GetString("loggerinit", resourceCulture);
+                return ResourceManager.GetString("loggerInit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to You&apos;re not supposed to be here. Make an issue..
         /// </summary>
-        internal static string notsupposedtobehere {
+        internal static string notSupposedToBeHere {
             get {
-                return ResourceManager.GetString("notsupposedtobehere", resourceCulture);
+                return ResourceManager.GetString("notSupposedToBeHere", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Initializing plugins....
         /// </summary>
-        internal static string plugininit {
+        internal static string pluginInit {
             get {
-                return ResourceManager.GetString("plugininit", resourceCulture);
+                return ResourceManager.GetString("pluginInit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loading .
         /// </summary>
-        internal static string pluginload {
+        internal static string pluginLoad {
             get {
-                return ResourceManager.GetString("pluginload", resourceCulture);
+                return ResourceManager.GetString("pluginLoad", resourceCulture);
             }
         }
     }

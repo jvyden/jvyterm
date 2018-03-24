@@ -30,7 +30,7 @@ namespace jvyterm
                 {
                     if (!pluginHandler.Run(cmd))
                     {
-                        logger.log(lang.invalcmd, logger.logType.Error);
+                        logger.log(lang.invalCmd, logger.logType.Error);
                     }
                     break;
 

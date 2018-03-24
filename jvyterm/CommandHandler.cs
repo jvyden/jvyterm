@@ -2,7 +2,7 @@
 
 namespace jvyterm
 {
-    public class CommandHandler
+    public class commandHandler
     {
         static List<string> a = new List<string>();
 
