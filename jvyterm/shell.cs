@@ -4,14 +4,19 @@ namespace jvyterm
 {
     class shell
     {
+        public static string getInput()
+        {
+            Console.Write(">");
+            string input = Console.ReadLine();
+            return input;
+        }
         public static void run()
         {
             PluginHandler.init();
             bool running = true;
             while (running)
             {
-                Console.Write(">");
-                string input = Console.ReadLine();
+                string input = getInput();
                 runCmd(input);
             }
         }
