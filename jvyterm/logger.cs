@@ -7,7 +7,7 @@ namespace jvyterm
     public class logger
     {
         static string logf = Environment.CurrentDirectory + "\\data\\log.txt";
-        public enum LogType {Error, Regular};
+        public enum LogType {Error, Regular, Silent};
         public static void log(string text, LogType l)
         {
             using (var f = File.Open(logf, FileMode.Append))
