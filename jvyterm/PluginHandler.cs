@@ -17,10 +17,10 @@ namespace jvyterm
             {
                 logger.log(lang.pluginLoad + f.Name + lang.dotDotDot, logger.logType.regular); // Tell the user we are loading a plugin.
                 Assembly a = Assembly.LoadFrom(f.FullName); // Load the plugin.
-                Type[] t = a.GetTypes(); // Prepares 
+                Type[] t = a.GetTypes(); // Make list of commands.
                 foreach (Type type in t)
                 {
-                    typeList.Add(type);
+                    typeList.Add(type); // Adds all of the commands to the list of commands
                 }
                 Run("init", f.Name); // Initialize the plugin
             }
@@ -29,22 +29,22 @@ namespace jvyterm
 
         static FileInfo[] getAllDLLs(string dir)
         {
-            DirectoryInfo d = new DirectoryInfo(dir);
-            FileInfo[] dlls = d.GetFiles("*.dll");
+            DirectoryInfo d = new DirectoryInfo(dir); // Get the directory
+            FileInfo[] dlls = d.GetFiles("*.dll"); // Get the dlls
             return dlls;
         }
 
         public static bool Run(string m, string init = null)
         {
-            foreach (Type type in typeList)
+            foreach (Type type in typeList) // Search all commands
             {
                 var c = Activator.CreateInstance(type);
                 try
                 {
-                    type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null);
+                    type.InvokeMember(m, BindingFlags.InvokeMethod, null, c, null); // Call the command
                     return true;
                 }
-                catch { logger.log(lang.invalCmd, logger.logType.error); }
+                catch { logger.log(lang.invalCmd, logger.logType.error); } // Wrong command
             }
             return true;
         }

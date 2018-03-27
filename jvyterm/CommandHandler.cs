@@ -8,12 +8,12 @@ namespace jvyterm
 
         public static void addCommand(string cmd)
         {
-            a.Add(cmd);
+            a.Add(cmd); // Adds the command to the command list
         }
 
         public static string[] getCmds()
         {
-            return a.ToArray();
+            return a.ToArray(); // Return the command list.
         }
     }
 }
