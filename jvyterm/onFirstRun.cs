@@ -7,7 +7,7 @@ namespace jvyterm
         public static void prep(string f)
         {
             Directory.CreateDirectory(f); // Make a data folder...
-            Directory.CreateDirectory(f + @"\plugins\"); //...and a plugins folder in that folder.
+            Directory.CreateDirectory(f + @"\plugins\"); // ...and a plugins folder in that folder.
            
             DirectoryInfo d = new DirectoryInfo(Environment.CurrentDirectory); // Get the current directory.
             FileInfo[] i = d.GetFiles("*.dll"); // Get all the dlls in the current directory.

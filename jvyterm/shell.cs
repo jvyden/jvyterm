@@ -7,7 +7,7 @@ namespace jvyterm
         public static string getInput()
         {
             Console.Write(">");
-            string input = Console.ReadLine(); //Get the input from the user
+            string input = Console.ReadLine(); // Get the input from the user
             return input;
         }
         public static void run()
@@ -23,7 +23,7 @@ namespace jvyterm
 
         static void runCmd(string cmd)
         {
-            string[] commands = commandHandler.getCmds(); // Get all of the comamnds
+            string[] commands = commandHandler.getCmds(); // Get all of the commands
             if (cmd != "help")
             {
                 foreach (string c in commands) // Search all of the commands.
