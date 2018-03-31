@@ -7,6 +7,7 @@ namespace jvyterm
 {
     public class pluginHandler
     {
+        static List<string> a = new List<string>();
         static List<Type> typeList = new List<Type>(); // Prepare a new type for the command list.
         public static void init()
         {
@@ -47,6 +48,16 @@ namespace jvyterm
                 catch { logger.log(lang.invalCmd, logger.logType.error); } // Wrong command
             }
             return true;
+        }
+
+        public static void addCommand(string cmd)
+        {
+            a.Add(cmd); // Adds the command to the command list
+        }
+
+        public static string[] getCmds()
+        {
+            return a.ToArray(); // Return the command list.
         }
     }
 }

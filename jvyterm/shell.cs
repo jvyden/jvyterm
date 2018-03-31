@@ -23,7 +23,7 @@ namespace jvyterm
 
         static void runCmd(string cmd)
         {
-            string[] commands = commandHandler.getCmds(); // Get all of the commands
+            string[] commands = pluginHandler.getCmds(); // Get all of the commands
             if (cmd != "help")
             {
                 foreach (string c in commands) // Search all of the commands.
@@ -40,7 +40,7 @@ namespace jvyterm
         }
         static void help() // Get all the commands and list them.
         {
-            string[] commands = commandHandler.getCmds();
+            string[] commands = pluginHandler.getCmds();
             foreach (string c in commands)
             {
                 logger.log(c, logger.logType.regular);

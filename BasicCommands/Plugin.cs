@@ -7,9 +7,9 @@ namespace basicCommands
     {
         public static void init()
         {
-            commandHandler.addCommand("exit");
-            commandHandler.addCommand("clear");
-            commandHandler.addCommand("cls");
+            pluginHandler.addCommand("exit");
+            pluginHandler.addCommand("clear");
+            pluginHandler.addCommand("cls");
         }
 
         public static void exit()
