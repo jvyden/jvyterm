@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="commandHandler.cs" />
     <Compile Include="logger.cs" />
     <Compile Include="onFirstRun.cs" />
     <Compile Include="pluginHandler.cs" />
