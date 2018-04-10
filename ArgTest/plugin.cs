@@ -6,8 +6,8 @@ namespace argTest
     {
         public static void init(string[] args = null)
         {
-            commandHandler.addCommand("argtest");
-            commandHandler.addCommand("noargtest");
+            pluginHandler.addCommand("argtest");
+            pluginHandler.addCommand("noargtest");
         }
 
         public static void argtest(string[] args = null)
