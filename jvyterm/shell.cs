@@ -16,8 +16,10 @@ namespace jvyterm
             bool running = true; 
             while (running)
             {
+ 
                 string input = getInput(); // Get input,
-                runCmd(input);             // and run the command
+                setArgs(input);            // send it to the argument handler,
+                runCmd(input);             // and then run the command.
             }
         }
 
@@ -45,6 +47,11 @@ namespace jvyterm
             {
                 logger.log(c, logger.logType.regular);
             }
+        }
+        public static string setArgs(string input)
+        {
+            string args = input.Substring(0, input.LastIndexOf(" ") + 1);
+            return args;
         }
     }
 }
