@@ -12,13 +12,18 @@ namespace jvyterm
         {
             using (var f = File.Open(logF, FileMode.Append)) // Open the log file
             {
-                byte[] bytes = Encoding.ASCII.GetBytes(text + '\n'); // Write the log, then make a new line
+                byte[] bytes = null;
+                if (l == logType.silent) {
+                    bytes = Encoding.ASCII.GetBytes("[SILENT]" + text + '\n');
+                }
+                else { bytes = Encoding.ASCII.GetBytes(text + '\n'); } // Write the log, then make a new line
+
                 f.Write(bytes, 0, bytes.Length); // Write the file.
             }
             if (l == logType.error)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed; // Set the color to dark red.
-                Console.WriteLine(text); // Write the text.
+                Console.WriteLine("[ERROR]: " + text); // Write the text.
                 Console.ForegroundColor = ConsoleColor.Gray; // Reset the color.
             }
             else if (l == logType.regular)
