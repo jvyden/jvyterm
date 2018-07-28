@@ -14,4 +14,5 @@
 * Arguments
 
 ## Scrapped Features
-* Ability to run standard programs (you can make this yourself using a plugin)
+### These are usually ideas for you, or are too hard to implement.
+* Ability to run standard programs
