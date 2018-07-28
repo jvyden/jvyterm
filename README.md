@@ -1,7 +1,6 @@
 # jvyterm
 ## Planned Features
 * What you suggest in issues
-* Ability to run standard programs (scrap?)
 
 ## Working Features
 * First run
@@ -14,5 +13,5 @@
 * Basic Commands
 * Arguments
 
-##Scrapped Features
+## Scrapped Features
 * Ability to run standard programs (you can make this yourself using a plugin)
