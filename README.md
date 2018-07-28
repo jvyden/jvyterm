@@ -13,3 +13,6 @@
 ## Features currently being worked on
 * Basic Commands
 * Arguments
+
+##Scrapped Features
+* Ability to run standard programs (you can make this yourself using a plugin)
